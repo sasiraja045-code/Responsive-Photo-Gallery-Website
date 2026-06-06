@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photo Gallery</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f4f1ec;
+}
+
+/* Hide Radio Buttons */
+input[type="radio"]{
+    display:none;
+}
+
+/* Header */
+
+.header{
+    height:220px;
+    background:linear-gradient(to right,#18485a,#2b7a78,#e09b2d);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:white;
+}
+
+.header h1{
+    font-size:50px;
+    margin-bottom:10px;
+}
+
+.header p{
+    font-size:15px;
+}
+
+/* Buttons */
+
+.buttons{
+    text-align:center;
+    margin:20px 0;
+}
+
+.buttons label{
+    display:inline-block;
+    padding:10px 22px;
+    border:1px solid #ccc;
+    border-radius:20px;
+    background:white;
+    cursor:pointer;
+    margin:5px;
+    font-size:14px;
+}
+
+/* Active Button */
+
+#all:checked ~ .buttons label[for="all"],
+#nature:checked ~ .buttons label[for="nature"],
+#food:checked ~ .buttons label[for="food"],
+#travel:checked ~ .buttons label[for="travel"]{
+    background:#6c3eb5;
+    color:white;
+    border:none;
+}
+
+/* Gallery */
+
+.gallery{
+    width:90%;
+    max-width:1000px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
+}
+
+.card{
+    overflow:hidden;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    display:block;
+    transition:0.4s;
+}
+
+.card:hover img{
+    transform:scale(1.08);
+}
+
+/* Filter */
+
+#all:checked ~ .gallery .card{
+    display:block;
+}
+
+#nature:checked ~ .gallery .card{
+    display:none;
+}
+#nature:checked ~ .gallery .nature{
+    display:block;
+}
+
+#food:checked ~ .gallery .card{
+    display:none;
+}
+#food:checked ~ .gallery .food{
+    display:block;
+}
+
+#travel:checked ~ .gallery .card{
+    display:none;
+}
+#travel:checked ~ .gallery .travel{
+    display:block;
+}
+
+</style>
+</head>
+<body>
+
+<input type="radio" name="filter" id="all" checked>
+<input type="radio" name="filter" id="nature">
+<input type="radio" name="filter" id="food">
+<input type="radio" name="filter" id="travel">
+
+<div class="header">
+    <h1>Photo Gallery</h1>
+    <p>Explore beautiful moments from nature, food and travel</p>
+</div>
+
+<div class="buttons">
+    <label for="all">All</label>
+    <label for="nature">Nature</label>
+    <label for="food">Food</label>
+    <label for="travel">Travel</label>
+</div>
+
+<div class="gallery">
+
+    <div class="card nature">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800">
+    </div>
+
+    <div class="card nature">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800">
+    </div>
+
+    <div class="card nature">
+        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800">
+    </div>
+
+    <div class="card food">
+        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800">
+    </div>
+
+    <div class="card food">
+        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800">
+    </div>
+
+    <div class="card food">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800">
+    </div>
+
+    <div class="card travel">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800">
+    </div>
+
+    <div class="card travel">
+        <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800">
+    </div>
+
+    <div class="card travel">
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800">
+    </div>
+
+</div>
+
+</body>
+</html>
