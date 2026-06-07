@@ -17,6 +17,17 @@ This is a responsive photo gallery website developed using HTML, CSS, and JavaSc
 * CSS3
 * JavaScript
 
+## Folder Structure
+
+Responsive-Photo-Gallery-Website/
+│
+├── photogallery.html
+├── jquery.html
+├── README.md
+├── Screenshot 2026-06-07 151747.png
+├── Screenshot 2026-06-07 151951.png
+└── Screenshot 2026-06-07 152121.png
+
 ## Project Files
 
 * photogallery.html
