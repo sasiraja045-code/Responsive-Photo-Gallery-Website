@@ -28,6 +28,10 @@ Responsive-Photo-Gallery-Website/
 ├── Screenshot 2026-06-07 151951.png
 └── Screenshot 2026-06-07 152121.png
 
+## Live Demo
+
+[View Project](https://sasiraja045-code.github.io/Responsive-Photo-Gallery-Website/)
+
 ## Project Files
 
 * photogallery.html
